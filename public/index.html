@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HTTP Status Explorer</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>HTTP Status Explorer</h1>
+
+<p class="info">
+Select any HTTP status code below to learn what it means.
+</p>
+
+<div class="panel">
+
+<div class="row">
+<span class="label">Success</span>
+<div id="success"></div>
+</div>
+
+<div class="row">
+<span class="label">Redirect</span>
+<div id="redirect"></div>
+</div>
+
+<div class="row">
+<span class="label">Client Error</span>
+<div id="client"></div>
+</div>
+
+<div class="row">
+<span class="label">Server Error</span>
+<div id="server"></div>
+</div>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

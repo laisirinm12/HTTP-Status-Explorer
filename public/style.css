@@ -1,0 +1,137 @@
+*{
+font-family: 'Fira Code', monospace;
+}
+
+html, body{
+font-family: 'Fira Code', monospace;
+height:100%;
+margin:0;
+overflow-x:hidden;
+padding:0;
+text-align:center;
+min-height:100vh;
+color:white;
+background: linear-gradient(-45deg,#667eea,#764ba2,#6a82fb,#8360c3);
+background-size:400% 400%;
+animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* container */
+
+.container{
+max-width:620px;
+margin:auto;
+padding-top:40px;
+padding-left:20px;
+padding-right:20px;
+}
+
+/* headings */
+
+h1{
+margin-bottom:10px;
+}
+
+.info{
+margin-bottom:30px;
+opacity:0.9;
+}
+
+/* glass panel */
+
+.panel{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* rows */
+
+.row{
+display:grid;
+grid-template-columns:150px auto;
+align-items:center;
+margin-bottom:15px;
+}
+
+/* labels */
+
+.label{
+text-align:left;
+font-weight:bold;
+}
+
+/* buttons container */
+
+.row div{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+/* buttons */
+
+.row button{
+padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+color:white;
+transition:all 0.2s ease;
+}
+
+/* hover effect */
+
+.row button:hover{
+transform:translateY(-2px);
+box-shadow:0 5px 12px rgba(0,0,0,0.3);
+}
+
+/* colors */
+
+.success{
+background:#2ecc71;
+}
+
+.redirect{
+background:#3498db;
+}
+
+.client{
+background:#f39c12;
+}
+
+.server{
+background:#e74c3c;
+}
+
+/* result glass card */
+
+#result{
+margin-top:25px;
+padding:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+display:none;
+}
