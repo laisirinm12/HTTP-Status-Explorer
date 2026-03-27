@@ -1,7 +1,6 @@
 async function checkStatus() {
 
     const code = document.getElementById("code").value;
-
     const res = await fetch(`/api/status/${code}`);
     const data = await res.json();
 

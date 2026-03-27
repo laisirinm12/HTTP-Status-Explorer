@@ -9,19 +9,23 @@ router.get("/", (req, res) => {
 
 router.get("/:code", (req, res) => {
 
-const code = req.params.code;
-const status = statusCodes[code];
+    let code = req.params.code;
 
-if (!status) {
-  return res.json({ message: "Status code not found" });
-}
+    // remove colon if present (extra safety)
+    code = code.replace(":", "");
 
-res.json({
-  code: code,
-  message: status.message,
-  description: status.description,
-  example: status.example
-});
+    const status = statusCodes[code];
+
+    if (!status) {
+        return res.status(404).json({ message: "Status code not found" });
+    }
+
+    res.json({
+        code: code,
+        message: status.message,
+        description: status.description,
+        example: status.example
+    });
 
 });
 
